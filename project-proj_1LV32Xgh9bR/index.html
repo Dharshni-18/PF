@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Dharshni G - Aspiring Data Scientist | AI & Data Science Student</title>
+    <meta name="description" content="Portfolio of Dharshni G, an aspiring Data Scientist and AI & Data Science student with expertise in machine learning, data analysis, and problem-solving.">
+    <meta name="keywords" content="Dharshni G, Data Scientist, AI, Machine Learning, Data Analysis, Portfolio, Student">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Dharshni G - Aspiring Data Scientist">
+    <meta property="og:description" content="Portfolio showcasing projects and achievements in AI & Data Science">
+    
+    <!-- Twitter -->
+    <meta name="twitter:title" content="Dharshni G - Aspiring Data Scientist">
+    <meta name="twitter:description" content="Portfolio showcasing projects and achievements in AI & Data Science">
+
+    <script src="https://resource.trickle.so/vendor_lib/unpkg/react@18/umd/react.production.min.js"></script>
+    <script src="https://resource.trickle.so/vendor_lib/unpkg/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://resource.trickle.so/vendor_lib/unpkg/@babel/standalone/babel.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://resource.trickle.so/vendor_lib/unpkg/lucide-static@0.516.0/font/lucide.css" rel="stylesheet">
+
+    <style type="text/tailwindcss">
+    @layer theme {
+        :root {
+            --primary-color: #8b5cf6;
+            --secondary-color: #312e81;
+            --accent-color: #c084fc;
+            --text-primary: #f8fafc;
+            --text-secondary: #d1d5db;
+            --bg-primary: #1a0b2e;
+            --bg-secondary: #16213e;
+            --bg-card: rgba(139, 92, 246, 0.1);
+            --border-color: rgba(139, 92, 246, 0.2);
+            --glass-bg: rgba(255, 255, 255, 0.05);
+            --glass-border: rgba(255, 255, 255, 0.1);
+        }
+    }
+
+    @layer base {
+        body {
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+    }
+
+    @layer components {
+        .btn-primary {
+            @apply bg-[var(--primary-color)] text-white px-6 py-3 rounded-lg font-medium transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/25 hover:transform hover:scale-105;
+            backdrop-filter: blur(10px);
+        }
+        
+        .btn-secondary {
+            @apply border border-[var(--primary-color)] text-[var(--primary-color)] px-6 py-3 rounded-lg font-medium transition-all duration-300 hover:bg-[var(--primary-color)] hover:text-white;
+            backdrop-filter: blur(10px);
+            background: var(--glass-bg);
+        }
+        
+        .card {
+            @apply rounded-xl p-6 border border-[var(--border-color)] transition-all duration-300 hover:transform hover:scale-105 hover:border-[var(--primary-color)] hover:shadow-lg hover:shadow-purple-500/20;
+            background: var(--glass-bg);
+            backdrop-filter: blur(15px);
+            border: 1px solid var(--glass-border);
+        }
+        
+        .section-title {
+            @apply text-3xl md:text-4xl font-bold text-center mb-12 text-[var(--text-primary)];
+        }
+        
+        .gradient-text {
+            @apply bg-gradient-to-r from-[var(--primary-color)] to-[var(--accent-color)] bg-clip-text text-transparent;
+        }
+        
+        .glass-effect {
+            background: var(--glass-bg);
+            backdrop-filter: blur(15px);
+            border: 1px solid var(--glass-border);
+        }
+    }
+
+    @layer utilities {
+        .text-shadow {
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        
+        @keyframes bounce {
+            0%, 20%, 53%, 80%, 100% {
+                transform: translate3d(0,0,0);
+            }
+            40%, 43% {
+                transform: translate3d(0,-15px,0);
+            }
+            70% {
+                transform: translate3d(0,-7px,0);
+            }
+            90% {
+                transform: translate3d(0,-2px,0);
+            }
+        }
+        
+        @keyframes pulse {
+            0%, 100% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0.5;
+            }
+        }
+        
+        @keyframes ping {
+            75%, 100% {
+                transform: scale(2);
+                opacity: 0;
+            }
+        }
+        
+        .animate-bounce {
+            animation: bounce 2s infinite;
+        }
+        
+        .animate-pulse {
+            animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        }
+        
+        .animate-ping {
+            animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+        }
+        
+        .delay-300 {
+            animation-delay: 300ms;
+        }
+        
+        .delay-500 {
+            animation-delay: 500ms;
+        }
+        
+        .delay-700 {
+            animation-delay: 700ms;
+        }
+        
+        .delay-1000 {
+            animation-delay: 1000ms;
+        }
+    }
+    </style>
+</head>
+<body>
+    <div id="root"></div>
+    
+    <script type="text/babel" src="components/Header.js"></script>
+    <script type="text/babel" src="components/Hero.js"></script>
+    <script type="text/babel" src="components/About.js"></script>
+    <script type="text/babel" src="components/Education.js"></script>
+    <script type="text/babel" src="components/Projects.js"></script>
+    <script type="text/babel" src="components/Skills.js"></script>
+    <script type="text/babel" src="components/Certifications.js"></script>
+    <script type="text/babel" src="components/Achievements.js"></script>
+    <script type="text/babel" src="components/Contact.js"></script>
+    <script type="text/babel" src="components/Footer.js"></script>
+    <script type="text/babel" src="app.js"></script>
+</body>
+</html>
